@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Grayhaven Chronicle - Noticias</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background: #f2f2f2;
+        color: #111;
+    }
+
+    /* HEADER PRINCIPAL */
+    header {
+        background: #0f0f0f;
+        color: white;
+        padding: 24px 30px;
+        text-align: center;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 32px;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+
+    /* BOTÓN SUSCRIPCIÓN */
+    .subscribe {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #b00020;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .subscribe:hover {
+        background: #d00028;
+    }
+
+    /* SEGUNDA BARRA DE NAVEGACIÓN */
+    nav {
+        background: #1c1c1c;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    nav a {
+        color: #ccc;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: white;
+    }
+
+    /* LAYOUT */
+    .layout {
+        display: flex;
+        max-width: 1200px;
+        margin: 20px auto;
+        gap: 20px;
+    }
+
+    .sidebar {
+        flex: 1;
+        background: #fff;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        height: fit-content;
+    }
+
+    .content {
+        flex: 2.5;
+        background: #fff;
+        padding: 25px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ADS */
+    .ad {
+        background: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 12px;
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    .ad strong {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    /* ARTICLE */
+    .category {
+        font-size: 12px;
+        color: #b00020;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 10px;
+        line-height: 1.2;
+    }
+
+    .meta {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .lead {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+
+    blockquote {
+        border-left: 4px solid #b00020;
+        padding-left: 12px;
+        font-style: italic;
+        line-height: 1.6;
+        color: #333;
+        margin: 15px 0;
+    }
+
+    .article-img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        margin: 15px 0;
+        border-radius: 2px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+        color: #777;
+    }
+
+    @media (max-width: 900px) {
+        .layout {
+            flex-direction: column;
+        }
+
+        .subscribe {
+            position: static;
+            transform: none;
+            margin-top: 10px;
+        }
+    }
+    .banner {
+    background: #eaeaea;
+    color: #111;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+.banner-ad {
+    max-width: 1200px;
+    max-height: 300px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.banner-ad img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+.ad-label {
+    font-size: 10px;
+    color: #777;
+    margin-bottom: 3px;
+    text-align: left;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">THE GRAYHAVEN CHRONICLE</div>
+    <button class="subscribe">SUSCRÍBETE</button>
+</header>
+
+    <div class="banner">
+    ⚠️ ÚLTIMA HORA: Continúa la búsqueda de los trabajadores desaparecidos en el bosque Solomon
+    </div>
+<!-- SEGUNDA BARRA -->
+<nav>
+
+    <a href="#">Inicio</a>
+    <a href="#">Internacional</a>
+    <a href="#">Local</a>
+    <a href="#">Economía</a>
+    <a href="#">Deportes</a>
+    <a href="#">Cultura</a>
+    <a href="#">Opinión</a>
+</nav>
+
+<div class="banner-ad">
+    <div class="ad-label">PUBLICIDAD</div>
+    <a href="#">
+        <img src="5b54dbb6-eeb1-4791-8f7b-32af42d7363b.png" alt="Publicidad">
+    </a>
+</div>
+
+<div class="layout">
+
+    <!-- SIDEBAR IZQUIERDA -->
+    <div class="sidebar">
+
+        <div class="ad">
+            <strong>GeoNatal amplía su presencia en el distrito este</strong>
+            La corporación GeoNatal ha confirmado la adquisición de un nuevo bloque de oficinas en el Campus Este, elevando a doce el número total de edificios bajo su control en la zona. Según un comunicado oficial, la expansión responde a “necesidades operativas y crecimiento sostenido en los sectores de análisis de datos y desarrollo biotecnológico” (<a href="#">Leer más</a>).
+        </div>
+
+        <div class="ad">
+            <strong>Grayhaven Wolves encadenan su cuarta victoria consecutiva</strong>
+            El equipo local, los Grayhaven Wolves, continúa su racha positiva tras imponerse anoche por 2-0 en el estadio municipal frente a los visitantes de Tacoma. El encuentro estuvo marcado por una defensa sólida y un segundo tiempo especialmente intenso, en el que el delantero Marcus Hale anotó ambos goles en apenas diez minutos. El entrenador destacó la disciplina y cohesión del equipo, señalando que el rendimiento físico de los jugadores ha mejorado notablemente en las últimas semanas (<a href="#">Leer más</a>).
+        </div>
+
+        <div class="ad">
+            <strong>Visita Grayhaven</strong>
+            Nueva campaña publicitaria del ayuntamiento, destinada a incrementar el turismo, especialmente orientada al turismo canadiense.
+        </div>
+
+    </div>
+
+    <!-- CONTENIDO CENTRAL -->
+    <div class="content">
+
+        <div class="category">Última hora / Solomon Forest</div>
+
+        <h1>Ocho guardias de seguridad desaparecen durante la noche en el bosque Solomon</h1>
+
+        <div class="meta">
+            Por James Kane · 6 de mayo de 2026 · Grayhaven, WA
+        </div>
+
+        <div class="lead">
+            Ocho empleados de seguridad privada que vigilaban el lugar han desaparecido sin dejar rastro durante su turno nocturno.
+        </div>
+
+        <img class="article-img" src="https://www.freud.org.uk/wp-content/uploads/2022/02/JuanCholo-CC-BY-SA-4.0.jpeg" alt="Bosque nocturno">
+
+        <p>
+            Las autoridades del condado de Grayhaven investigan la desaparición de ocho empleados de seguridad privada vinculados a la empresa maderera Belford Timber Operations, tras no regresar de su turno de vigilancia nocturna en las instalaciones situadas en el bosque Solomon.
+        </p>
+
+        <p>
+            Los trabajadores formaban parte del equipo contratado para patrullar los perímetros de extracción y almacenamiento de madera en la zona norte del bosque, una región históricamente asociada a actividad forestal intensiva y acceso restringido durante la noche.
+        </p>
+        <p>
+            Según el informe preliminar de la oficina del Sheriff del condado, los equipos de búsqueda han localizado únicamente dos teléfonos móviles parcialmente dañados en un sendero secundario, junto a huellas interrumpidas en el terreno que se adentran en la zona de vegetación densa. No se han encontrado signos de violencia concluyente ni restos materiales adicionales.
+        </p>
+        <p>
+            Las operaciones de rastreo continúan, aunque las condiciones del terreno y la falta de cobertura en amplias áreas del bosque están dificultando las labores de localización.
+        </p>
+        <h2>
+            DECLARACIÓN DE BELFORD TIMBER OPS
+        </h2>
+        <p>
+            El director ejecutivo de Belford Timber Ops, Harold M. Belford, emitió un comunicado esta mañana en el que confirmó la desaparición del personal y expresó su “profunda preocupación por la seguridad de nuestros empleados”.
+        </p>
+        <p>
+            Belford añadió que la empresa había reforzado recientemente sus protocolos de vigilancia debido a “posibles riesgos de sabotaje en áreas de explotación forestal”, aunque aclaró que no existen indicios que vinculen el incidente con actividades humanas organizadas.
+        </p>
+        <blockquote>
+            “Hemos aumentado la presencia de seguridad en Solomon Ridge precisamente para prevenir incidentes de este tipo. En este momento no tenemos información adicional sobre lo ocurrido, y estamos cooperando plenamente con las autoridades locales”
+        </blockquote>
+
+        <p>
+            La compañía no ha confirmado si suspenderá temporalmente sus operaciones en la zona.
+        </p>
+         <img class="article-img" src="./4744c640-88a3-461b-a1de-448acdefe729.jpg" alt="Bosque nocturno">
+        <p>
+            El Departamento del Sheriff ha establecido un perímetro de búsqueda ampliado y solicita cualquier información relacionada con movimientos inusuales de vehículos o personal en la zona durante la última noche.
+            Un portavoz del cuerpo policial ha señalado que “todas las posibilidades siguen abiertas”.
+        </p>
+
+
+    </div>
+
+    <!-- SIDEBAR DERECHA -->
+    <div class="sidebar">
+
+        <div class="ad">
+            <strong>Reacciones a lo ocurrido</strong>
+            Familiares de los desaparecidos se han concentrado frente a las oficinas regionales de Belford en Grayhaven, exigiendo respuestas inmediatas (<a href="#">Leer más</a>).
+        </div>
+
+        <div class="ad">
+            <strong>Protestas sindicales frente a GeoNatal</strong>
+            Decenas de trabajadores y representantes sindicales se concentraron ayer frente al complejo corporativo de GeoNatal para denunciar prácticas laborales “abusivas e insostenibles” tras una nueva ronda de despidos en el sector logístico. La manifestación, organizada por la Federación Regional de Trabajadores Industriales, provocó cortes parciales de tráfico y una importante presencia de seguridad privada en los accesos al campus.
+        </div>
+
+        <div class="ad">
+            <strong>Incidente nocturno en The Zone deja tres heridos</strong>
+            La policía respondió durante la madrugada a un altercado violento en el distrito de ocio de The Zone que dejó al menos tres personas hospitalizadas. Testigos describieron escenas de pánico y comportamiento “extremadamente agresivo” entre varios implicados antes de la llegada de seguridad privada. Las autoridades no han realizado detenciones por el momento.
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 The Grayhaven Chronicle · Todos los derechos reservados
+</footer>
+
+</body>
+</html>
